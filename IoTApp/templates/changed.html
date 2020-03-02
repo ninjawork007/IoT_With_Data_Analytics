@@ -1,0 +1,38 @@
+<html>
+<head><title>IoTPro</title></head>
+<body>
+
+
+<h1> IoT Project </h1>
+
+ <form method="post" action="/">
+
+                <!--<input type="submit" value="OFF" name="OFF"/>
+                <input type="submit" value="ON" name="ON" />-->
+		<input type="submit" value="Show" name="Show" />
+            </div>
+   </form>
+
+
+<h2>Fetched Data:</h2>
+<h2>Temp</h2>
+{% for r in temp %}
+    {% if r!=0  %}
+        
+        <h3>{{ r }}
+    {% endif %}
+{% endfor %}
+
+
+
+<h2>Humidity</h2>
+{% for r in humidity %}
+    {% if r!=0  %}
+        
+        <h3>{{ r }}
+    {% endif %}
+{% endfor %}
+
+
+</body>
+</html>

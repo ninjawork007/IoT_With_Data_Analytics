@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title> IoTProject2019</title>
+<style>
+h1{
+  color:blue;
+
+}
+form { 
+margin: 0 auto; 
+width:250px;
+}
+table{
+border-collapse: separate;
+width: 100%;
+color: #588c7e;
+font-family: monospace;
+font-size: 25px;
+text-align: center;
+}
+th{
+background-color: #588c7e;
+color: white;
+}
+tr:nth-child(even) {background-color: #f2f2f2}
+caption { 
+  display: table-caption;
+  text-align: center;
+  color: red;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+<h1><img src="{{url_for('static', filename='iiitdm.png')}}" height=150px, width=150px style="float:left"/> <center>Water Quality Monitoring System using IoT & Data Analytics</center> <img src="{{url_for('static', filename='veltech.png')}}" height=150px, width=150px style="float:right"/></h1>
+
+ <form method="post" action="/">
+
+                <!--<input type="submit" value="OFF" name="OFF"/>
+                <input type="submit" value="ON" name="ON" />-->
+		<input type="submit" value="Show" name="Show" />
+            </div>
+   </form>
+
+<table>
+<caption> Captured Data</caption>
+<tr>
+<th>TITLE</th>
+<th>TEMPERATURE</th>
+<th>HUMIDITY</th>
+</tr>
+{% for r in range(l) %}
+    {% if temp[r]!=0 and humidity[r]!=0  %}
+        
+	<tr><td>DHT11 Sensor</td><td>{{ temp[r] }}</td><td> {{ humidity[r] }}</td></tr>
+
+    {% endif %}
+{% endfor %}
+
+
+</table>
+
+<div>
+<span style="float:right">
+</br>
+</br>
+Developed by :- </br>
+</br>
+Manendra Nath Shukla<br/>
+Rishu Raj</br>
+Soumya Michael</br>
+V.Suriyaa</br>
+
+</div>
+<div>
+<span style="float:left">
+</br>
+</br>
+Guided by :- </br>
+</br>
+Dr.Munesh Singh<br/>
+Assistant Professor,Dept.Of CSE</br>
+IIID&M Kancheepuram</br>
+</div>
+
+
+
+</table>
+</body>
+</html>
